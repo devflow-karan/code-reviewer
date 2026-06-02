@@ -1,0 +1,42 @@
+# Backlog
+
+- [x] Create project file structure and `.env.example`
+- [x] Review complete code as per TS standard and fix types/imports
+- [x] Fix tsconfig for CommonJS import syntax
+- [x] Refactor process.env usage to use centralized config file
+- [x] Add scripts for dev restart and prod build
+- [x] Fix TS5107 error for deprecated node10 moduleResolution
+- [x] Replace console.log with winston logger
+- [x] Add missing .gitignore file
+- [x] Review and refactor AI service (config, error handling, JSON parsing)
+- [x] Apply strong Interface typings to Queue and Services
+- [x] Fix regressions to process.env and re-apply config imports
+- [x] Sweep codebase for remaining `console.log/error` regressions and replace with `logger`
+- [x] Fix process.env regression in `src/queue/queue.ts` and apply config module
+- [x] Fix process.env regression in `src/services/ai.service.ts`
+- [x] Fix `SyntaxError: Unterminated string in JSON` in Worker by increasing tokens and enforcing `json_object` format
+- [x] Increase Express JSON body payload size limit to 5mb
+- [x] Handle Express `body-parser` JSON SyntaxErrors gracefully via middleware
+- [x] Fix GitLab webhook ignoring "Test Webhook" payloads due to missing `action` field
+- [x] Handle GitLab commit status redundant transition errors gracefully
+- [x] Enable worker execution and synchronize queue processing
+- [x] Fix BullMQ redis connection error by setting maxRetriesPerRequest to null
+- [x] Replace OpenAI with Gemini AI using direct REST API calls via Axios
+- [x] Add detailed worker logging and diagnostic checks to resolve silent completion / hangs
+- [x] Load review rules dynamically from a markdown file instead of hardcoding
+- [x] Add more review rules, exclude docs folder, and implement conventional commit / description checks
+- [x] Add defensive array check in getMrCommits to avoid potential TypeError if GitLab API fails
+- [x] Cancel commit status and skip review for closed or merged MRs
+- [x] Replace deprecated showChanges with allDiffs and show in gitlab.service.ts
+- [x] Revert allDiffs change and return to showChanges to resolve 404 API crash
+- [x] Implement blockMr to prepend Draft: to title and unapprove MR on review failure/cancellation
+- [x] Skip review for unchanged file diffs using hidden metadata comment hashing
+- [x] Implement incremental diff review comparing last reviewed SHA to current SHA
+- [x] Implement inline comments using GitLab Draft Notes and positions
+- [x] Implement Bulk Publish to submit the AI review in one go
+- [x] Handle 404 errors during draft note creation with inline position by falling back to global comments
+- [x] Refactor draft review flow to live line-by-line discussions
+- [x] GitLab Note Webhook & AI Re-Review / Thread Resolution
+- [x] GitHub Integration (Webhooks, Pull Request Review, Status Checks, Comment Reply/Resolution)
+
+
